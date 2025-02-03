@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "title": "High-Speed Laser Printer",
+        "slug": "high-speed-laser-printer",
+        "image": "../css/printer1.jpeg",
+        "description": "This high-speed laser printer is perfect for businesses.",
+        "specs": ["Print Speed: 40 pages per minute", "Resolution: 1200 x 1200 dpi", "Connectivity: USB, Ethernet, Wi-Fi"]
+    },
+    {
+        "id": 2,
+        "title": "All-in-One Inkjet Printer",
+        "slug": "all-in-one-inkjet-printer",
+        "image": "../css/printer2.avif",
+        "description": "An all-in-one inkjet printer for home and office use.",
+        "specs": ["Print, Scan, Copy", "Resolution: 600 x 600 dpi", "Compact Design"]
+    },
+    {
+        "id": 3,
+        "title": "Compact Wireless Printer",
+        "slug": "compact-wireless-printer",
+        "image": "../css/printer3.jpeg",
+        "description": "A compact and wireless printer for personal use.",
+        "specs": ["Wireless Connectivity", "Print Speed: 20 pages per minute", "Portable and Lightweight"]
+    }
+]

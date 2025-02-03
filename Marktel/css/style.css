@@ -1,0 +1,583 @@
+.about-us-section {
+    padding: 10px 20px;        /* Padding around the section */
+    text-align: center;        /* Center-align the content */
+}
+
+.about-us-section h2 {
+    font-size: 2rem;
+    color: #005f73;           /* Match your website's color theme */
+    margin-bottom: 20px;      /* Space below the heading */
+}
+
+.about-us-section p {
+    font-size: 1rem;
+    color: #333;              /* Neutral text color */
+    line-height: 1.6;         /* Better readability */
+    margin-bottom: 15px;      /* Space between paragraphs */
+}
+
+.about-us-section strong {
+    color: #005f73;           /* Highlighted text color */
+    font-weight: bold;
+}
+
+.about-us-section .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;           /* Center the container */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+
+    /* Background Image */
+    background-image: url('../css/background1.jpeg'); 
+    background-size: cover;         /* Ensure it covers the entire screen */
+    background-position: center;    /* Centers the image */
+    background-repeat: no-repeat;   /* Prevents tiling */
+    background-attachment: fixed;   /* Keeps it in place when scrolling */
+
+    /* Improve Image Quality */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    /* Ensure high-quality rendering */
+    image-rendering: -webkit-optimize-contrast;  /* Chrome, Safari */
+    image-rendering: crisp-edges;  /* Firefox */
+    image-rendering: pixelated;  /* Try this for a sharper look */
+}
+
+/* General Section Styling */
+#location {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Map Container Styling */
+#map-container {
+    justify-content: center;
+    align-items: center;
+    margin: -26px 0px 10px;
+    max-width: 100%;
+    width: 90%; /* Adjusts to the parent container width */
+}
+
+.footer-location{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#map-container iframe {
+    border: 0;
+    width: 90%;
+    max-width: 900px; /* Sets a maximum width for large screens */
+    height: 400px;
+    border-radius: 8px; /* Optional: Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Shadow for depth */
+}
+
+.google-map-embed {
+    width: 100%;             /* Make the iframe take full width */
+    height: 200px;           /* Set a fixed height */
+    border: 0;               /* Remove default border */
+    border-radius: 8px;      /* Optional: Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .slideshow {
+        max-width: 100%;      /* Adjusts container width for smaller screens */
+    }
+    
+    .slide img {
+        max-height: 200px;  /* Reduce height for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .slide img {
+        max-height: 200px;    /* Further reduces image height for very small screens */
+    }
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Section Styling */
+section {
+    padding: 100px 20px;
+    text-align: center;
+    scroll-margin-top: 80px;
+}
+
+main {
+    padding-top: 80px; /* Match the height of the fixed header */
+}
+
+main .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.8); /* Optional for readability */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+header {
+    position: fixed;       /* Fixes the header at the top */
+    top: 0;                /* Aligns the header to the top of the viewport */
+    width: 100%;           /* Ensures the header spans the full width */
+    z-index: 1000;         /* Ensures the header stays above other content */
+    background-color: #005f73; /* Keeps the background solid */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    height: 80px;
+}
+
+/* Container for the header */
+header .container {
+    display: flex;                /* Enable Flexbox */
+    justify-content: space-between; /* Push logo to the left, nav to the right */
+    align-items: center;          /* Center items vertically */
+    padding: 10px 20px;           /* Add spacing around the header */
+    color: #fff;                  /* Text color */
+}
+
+/* Logo styling */
+header .logo a {
+    text-decoration: none;        /* Remove underline */
+    color: #fff;                  /* Logo text color */
+    font-size: 1.5rem;            /* Make the logo prominent */
+    font-weight: bold;
+    flex: 1;            /* Bold logo text */
+}
+
+/* Navigation links styling */
+header .nav-links {
+    list-style: none;             /* Remove bullet points */
+    display: flex;                /* Align links horizontally */
+    gap: 15px;                    /* Space between links */
+    margin: 0;                    /* Reset default margin */
+    padding: 0;                   /* Reset default padding */
+}
+
+header .nav-links li a {
+    text-decoration: none;        /* Remove underline */
+    color: #fff;                  /* Link text color */
+    padding: 5px 10px;            /* Add padding for clickable area */
+    transition: color 0.3s ease;  /* Smooth hover effect */
+}
+
+header .nav-links li a:hover {
+    color: #ffcb47;               /* Change color on hover */
+}
+
+header .header-content {
+    display: flex;                /* Align links horizontally */
+    align-items: center;          /* Center items vertically */
+}
+
+header .logo {
+    width: 100px;                  /* Set the desired width */
+    height: 60px;                  /* Set the desired height */
+     /* Logo image path */
+    background-size: contain;      /* Scale the image proportionally */
+    background-repeat: no-repeat;  /* Avoid repeating the image */
+    background-position: center;   /* Center the image inside the container */
+}
+
+header .logo img {
+    height: 100%;                /* Make the logo fit the header height */
+    max-height: 110px;            /* Set a maximum height to prevent it from becoming too large */
+    width: auto;                 /* Maintain the aspect ratio */
+}
+
+#services {
+    padding: 10px 10px;
+    text-align: center;
+}
+
+#services h2 {
+    font-size: 2rem;
+    color: #005f73;
+    margin-bottom: 30px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid layout */
+    gap: 20px; /* Space between grid items */
+}
+
+.service-item {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effects */
+}
+
+.service-item:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+.service-item img {
+    max-width: 130px;
+    margin-bottom: 0px;
+}
+
+.service-item h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Slideshow Section Styling */
+.slideshow-section {
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.slideshow-section h2 {
+    font-size: 2rem;
+    color: #005f73;
+    margin-bottom: 20px;
+}
+
+/* Slideshow Container */
+.slideshow {
+    position: relative;
+    max-width: 1200px;         /* Maximum width of the slideshow */
+    margin: 0 auto;           /* Centers the slideshow */
+    overflow: hidden;
+    border-radius: 10px;      /* Matches the image's rounded corners */
+}
+
+.slide.active {
+    display: block; /* Show the active slide */
+}
+
+.slide {
+    display: flex;
+    flex-direction: column; /* Arrange items vertically */
+    justify-content: center;
+    align-items: center;
+    height: 600px; /* Fixed height for all slides */
+    overflow: hidden; /* Prevents overflow of images or text */
+    text-align: center; /* Ensures text is centered */
+}
+
+.slide img {
+    margin: 10px 0;
+    max-width: 100%;    /* Scale the image proportionally */
+    max-height: 80%;    /* Prevents the image from taking up too much space */
+    object-fit: contain; /* Maintain aspect ratio and ensure full visibility */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+    margin-bottom: 10px; /* Adds space between the image and text */
+    background-color: #ffffff; /* Button background color */
+}
+
+.slide p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #333; /* Neutral text color */
+}
+
+.slide a {
+    display: inline-block;
+    margin-top: 10px; /* Adds space above the link */
+    padding: 8px 15px;
+    font-size: 1rem;
+    color: #ffffff; /* Link text color */
+    background-color: #005f73; /* Button background color */
+    border-radius: 5px; /* Rounded button corners */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease;
+}
+
+.slide a:hover {
+    background-color: #ffcb47; /* Hover effect for the button */
+    color: #ffffff; /* Optional: Change text color on hover */
+}
+
+/* Controls (Next/Prev Buttons) */
+.slideshow-controls {
+    position: relative;
+}
+
+.slideshow-controls button {
+    background-color: #005f73;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    margin: 5px;
+    transition: background-color 0.3s;
+}
+
+.slideshow-controls button:hover {
+    background-color: #ffcb47;
+}
+
+/* Search Container */
+.search-container {
+    position: relative;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 250px;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 1000;
+    display: none; /* Initially hidden */
+}
+
+.search-results.show {
+    display: block; /* Display when there are search results */
+}
+
+.search-results li {
+    padding: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.search-results li:hover {
+    background-color: #f0f0f0;
+}
+
+.search-results li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+.search-results li a:hover {
+    color: #005f73;
+}
+
+#product-search-input {
+    width: 250px;
+    padding: 8px;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#product-search-input:focus {
+    border-color: #005f73;
+}
+
+.product-search {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.product-search input {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.product-search input:focus {
+    border-color: #005f73; /* Match your theme color */
+}
+
+/* Basic styling for the product details page */
+#product-details {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#product-details img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+#product-details ul {
+    list-style: disc inside;
+    margin: 20px 0px;
+    max-width: 600px;
+    text-align: left;
+}
+
+#product-details button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #005f73;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#product-details button:hover {
+    background-color: #ffcb47;
+}
+
+#product-details .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff; /* White background for the content box */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: left; /* Align content to the left */
+}
+
+#product-details h1 {
+    font-size: 2rem;
+    color: #005f73; /* Match your theme */
+    margin-bottom: 20px;
+    text-align: center; /* Center-align the title */
+}
+
+#product-details img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Optional: Rounded corners */
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#product-details p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.6; /* Improve readability */
+}
+
+#product-details h3 {
+    font-size: 1.5rem;
+    color: #005f73;
+    margin-bottom: 10px;
+}
+
+#product-specs {
+    margin: 20px auto; /* Space above the specifications */
+    text-align: left; /* Align list to the left for better readability */
+    font-size: 1.1rem; /* Slightly larger font size */
+    color: #333;
+    max-width: 800px; /* Limit the width */
+    padding-left: 0; /* Remove default padding on the left */
+    list-style-position: inside; /* Make the bullets align with the text */
+}
+
+#product-specs li {
+    margin-bottom: 10px; /* Add some space between list items */
+}
+
+.back-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    color: white;
+    background-color: #005f73;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: #ffcb47;
+}
+
+/* General Link Styles */
+a {
+    text-decoration: none; /* Removes the underline */
+    color: #005f73; /* Default link color */
+    font-weight: bold; /* Makes the text bold */
+    transition: color 0.3s ease; /* Smooth color change on hover */
+}
+
+a:hover {
+    color: #ffcb47; /* Changes color when hovered */
+}
+
+a.back-btn:hover {
+    color: white; /* Keeps the original color on hover */
+    text-decoration: none; /* Prevents underline or other styles on hover */
+}
+
+a:active {
+    color: #ff5733; /* Changes color when clicked */
+}
+
+footer {
+    background-color: #222;
+    color: #ccc;
+    padding: 10px 0;
+    text-align: center;
+}
+
+footer .social-links {
+    list-style: none;
+    padding: 0;
+    display: inline-flex;
+    gap: 10px;
+}
+
+footer .social-links li a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+footer .social-links li a:hover {
+    color: #fff;
+}
+
+/* Footer Container Adjustments */
+.footer-contacts {
+    display: flex; /* Align contact items next to each other */
+    justify-content: center; /* Distribute them evenly */
+    gap: 20px; /* Adds spacing between items */
+    flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
+    text-align: left; /* Aligns text to the left */
+}
+
+.contact-item {
+    display: inline-block;
+    text-align: center;
+}
