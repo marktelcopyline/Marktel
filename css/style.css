@@ -1,3 +1,27 @@
+/*General Styles Start (Applied to Every Page)*/
+a {
+    text-decoration: none; /* Removes the underline */
+    color: #005f73; /* Default link color */
+    font-weight: bold; /* Makes the text bold */
+    transition: color 0.3s ease; /* Smooth color change on hover */
+}
+
+a:hover {
+    color: #ffcb47; /* Changes color when hovered */
+}
+
+a.back-btn:hover {
+    color: white; /* Keeps the original color on hover */
+    text-decoration: none; /* Prevents underline or other styles on hover */
+}
+
+a:active {
+    color: #ff5733; /* Changes color when clicked */
+}
+/*General Styles End*/
+
+/*Index Page Start*/
+
 .about-us-section {
     padding: 10px 20px;        /* Padding around the section */
     text-align: center;        /* Center-align the content */
@@ -49,7 +73,6 @@ body {
     /* Ensure high-quality rendering */
     image-rendering: -webkit-optimize-contrast;  /* Chrome, Safari */
     image-rendering: crisp-edges;  /* Firefox */
-    image-rendering: pixelated;  /* Try this for a sharper look */
 }
 
 /* General Section Styling */
@@ -90,33 +113,196 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow */
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .slideshow {
-        max-width: 100%;      /* Adjusts container width for smaller screens */
-    }
-    
-    .slide img {
-        max-height: 200px;  /* Reduce height for smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .slide img {
-        max-height: 200px;    /* Further reduces image height for very small screens */
-    }
-}
-
-/* Smooth Scrolling */
 html {
     scroll-behavior: smooth;
-}
+  }  
 
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #005f73;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 80px;
+  }
+  
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: #fff;
+  }
+  
+  header .logo {
+    width: 100px;
+    height: 60px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  header .logo img {
+    height: 100%;
+    max-height: 110px;
+    width: auto;
+  }
+  
+  header .logo a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    flex: 1;
+  }
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-content .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header-content .nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .header-content .nav-links li a:hover {
+    color: #ffcb47;
+  }
+  
+  /* Hide hamburger by default */
+  .hamburger {
+    display: none;
+  }
+  
+  /* === MOBILE DRAWER MENU === */
+  @media (max-width: 768px) {
+    header {
+      height: auto;
+    }
+  
+    header .container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    /* Show hamburger */
+    .hamburger {
+      display: block;
+      font-size: 28px;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      z-index: 10001;
+      position: relative;
+      margin-left: auto;
+    }
+  
+    /* Hide desktop nav */
+    .header-content {
+      display: none;
+      width: 100%;
+    }
+  
+    /* Drawer navigation */
+    .nav-overlay {
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100vh;
+      width: 250px;
+      background-color: rgba(0, 95, 115, 0.95);
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 40px 20px;
+    }
+  
+    .nav-overlay.active {
+      transform: translateX(0);
+    }
+  
+    .nav-overlay .nav-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+    }
+  
+    .nav-overlay .nav-links li {
+      width: 100%;
+      margin: 10px 0;
+    }
+  
+    .nav-overlay .nav-links li a {
+      color: white;
+      font-size: 1.2rem;
+      text-decoration: none;
+      display: block;
+      padding: 10px 15px;
+      transition: background-color 0.3s ease;
+    }
+  
+    .nav-overlay .nav-links li a:hover {
+      background-color: #0a6f85;
+      color: #ffcb47;
+    }
+  }
+  
+  /* === EXTRA SMALL SCREEN IMAGE TWEAK === */
+  @media (max-width: 480px) {
+    .slide img {
+      max-height: 200px;
+    }
+  }
+  
 /* Section Styling */
 section {
     padding: 100px 20px;
     text-align: center;
     scroll-margin-top: 80px;
+}
+
+.service-item {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 15px;
+    background-color: white;
+}
+  
+.service-item:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+  
+.service-details {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+}
+  
+.service-item.active .service-details {
+    max-height: 500px; /* large enough to fit all text */
+    opacity: 1;
+    margin-top: 10px;
 }
 
 main {
@@ -130,74 +316,6 @@ main .container {
     background-color: rgba(255, 255, 255, 0.8); /* Optional for readability */
     padding: 20px;
     border-radius: 10px;
-}
-
-header {
-    position: fixed;       /* Fixes the header at the top */
-    top: 0;                /* Aligns the header to the top of the viewport */
-    width: 100%;           /* Ensures the header spans the full width */
-    z-index: 1000;         /* Ensures the header stays above other content */
-    background-color: #005f73; /* Keeps the background solid */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
-    height: 80px;
-}
-
-/* Container for the header */
-header .container {
-    display: flex;                /* Enable Flexbox */
-    justify-content: space-between; /* Push logo to the left, nav to the right */
-    align-items: center;          /* Center items vertically */
-    padding: 10px 20px;           /* Add spacing around the header */
-    color: #fff;                  /* Text color */
-}
-
-/* Logo styling */
-header .logo a {
-    text-decoration: none;        /* Remove underline */
-    color: #fff;                  /* Logo text color */
-    font-size: 1.5rem;            /* Make the logo prominent */
-    font-weight: bold;
-    flex: 1;            /* Bold logo text */
-}
-
-/* Navigation links styling */
-header .nav-links {
-    list-style: none;             /* Remove bullet points */
-    display: flex;                /* Align links horizontally */
-    gap: 15px;                    /* Space between links */
-    margin: 0;                    /* Reset default margin */
-    padding: 0;                   /* Reset default padding */
-}
-
-header .nav-links li a {
-    text-decoration: none;        /* Remove underline */
-    color: #fff;                  /* Link text color */
-    padding: 5px 10px;            /* Add padding for clickable area */
-    transition: color 0.3s ease;  /* Smooth hover effect */
-}
-
-header .nav-links li a:hover {
-    color: #ffcb47;               /* Change color on hover */
-}
-
-header .header-content {
-    display: flex;                /* Align links horizontally */
-    align-items: center;          /* Center items vertically */
-}
-
-header .logo {
-    width: 100px;                  /* Set the desired width */
-    height: 60px;                  /* Set the desired height */
-     /* Logo image path */
-    background-size: contain;      /* Scale the image proportionally */
-    background-repeat: no-repeat;  /* Avoid repeating the image */
-    background-position: center;   /* Center the image inside the container */
-}
-
-header .logo img {
-    height: 100%;                /* Make the logo fit the header height */
-    max-height: 110px;            /* Set a maximum height to prevent it from becoming too large */
-    width: auto;                 /* Maintain the aspect ratio */
 }
 
 #services {
@@ -248,176 +366,23 @@ header .logo img {
     color: #666;
 }
 
-/* Slideshow Section Styling */
-.slideshow-section {
-    padding: 10px 20px;
-    text-align: center;
-}
+/*Index Page Start*/
 
-.slideshow-section h2 {
-    font-size: 2rem;
-    color: #005f73;
-    margin-bottom: 20px;
-}
+/*Products HTML Start*/
 
-/* Slideshow Container */
-.slideshow {
-    position: relative;
-    max-width: 1200px;         /* Maximum width of the slideshow */
-    margin: 0 auto;           /* Centers the slideshow */
-    overflow: hidden;
-    border-radius: 10px;      /* Matches the image's rounded corners */
-}
-
-.slide.active {
-    display: block; /* Show the active slide */
-}
-
-.slide {
-    display: flex;
-    flex-direction: column; /* Arrange items vertically */
-    justify-content: center;
-    align-items: center;
-    height: 600px; /* Fixed height for all slides */
-    overflow: hidden; /* Prevents overflow of images or text */
-    text-align: center; /* Ensures text is centered */
-}
-
-.slide img {
-    margin: 10px 0;
-    max-width: 100%;    /* Scale the image proportionally */
-    max-height: 80%;    /* Prevents the image from taking up too much space */
-    object-fit: contain; /* Maintain aspect ratio and ensure full visibility */
-    border-radius: 10px; /* Optional: Adds rounded corners */
-    margin-bottom: 10px; /* Adds space between the image and text */
-    background-color: #ffffff; /* Button background color */
-}
-
-.slide p {
-    font-size: 1.2rem;
-    margin: 10px 0;
-    color: #333; /* Neutral text color */
-}
-
-.slide a {
+.back-btn {
     display: inline-block;
-    margin-top: 10px; /* Adds space above the link */
-    padding: 8px 15px;
-    font-size: 1rem;
-    color: #ffffff; /* Link text color */
-    background-color: #005f73; /* Button background color */
-    border-radius: 5px; /* Rounded button corners */
-    text-decoration: none; /* Remove underline */
+    margin-top: 20px;
+    padding: 10px 20px;
+    color: white;
+    background-color: #005f73;
+    text-decoration: none;
+    border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
-.slide a:hover {
-    background-color: #ffcb47; /* Hover effect for the button */
-    color: #ffffff; /* Optional: Change text color on hover */
-}
-
-/* Controls (Next/Prev Buttons) */
-.slideshow-controls {
-    position: relative;
-}
-
-.slideshow-controls button {
-    background-color: #005f73;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    margin: 5px;
-    transition: background-color 0.3s;
-}
-
-.slideshow-controls button:hover {
+.back-btn:hover {
     background-color: #ffcb47;
-}
-
-/* Search Container */
-.search-container {
-    position: relative;
-    display: inline-block;
-    margin-left: 20px;
-}
-
-.search-results {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 250px;
-    max-height: 200px;
-    overflow-y: auto;
-    background-color: white;
-    border: 1px solid #ccc;
-    border-top: none;
-    border-radius: 0 0 5px 5px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    z-index: 1000;
-    display: none; /* Initially hidden */
-}
-
-.search-results.show {
-    display: block; /* Display when there are search results */
-}
-
-.search-results li {
-    padding: 8px;
-    cursor: pointer;
-    font-size: 0.9rem;
-}
-
-.search-results li:hover {
-    background-color: #f0f0f0;
-}
-
-.search-results li a {
-    text-decoration: none;
-    color: #333;
-    display: block;
-}
-
-.search-results li a:hover {
-    color: #005f73;
-}
-
-#product-search-input {
-    width: 250px;
-    padding: 8px;
-    font-size: 1rem;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    outline: none;
-    transition: border-color 0.3s;
-}
-
-#product-search-input:focus {
-    border-color: #005f73;
-}
-
-.product-search {
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.product-search input {
-    width: 80%;
-    max-width: 400px;
-    padding: 10px;
-    font-size: 1rem;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    outline: none;
-    transition: border-color 0.3s;
-}
-
-.product-search input:focus {
-    border-color: #005f73; /* Match your theme color */
 }
 
 /* Basic styling for the product details page */
@@ -509,41 +474,179 @@ header .logo img {
     margin-bottom: 10px; /* Add some space between list items */
 }
 
-.back-btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    color: white;
-    background-color: #005f73;
-    text-decoration: none;
+#product-search-input {
+    width: 250px;
+    padding: 8px;
+    font-size: 1rem;
+    border: 2px solid #ccc;
     border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#product-search-input:focus {
+    border-color: #005f73;
+}
+
+.product-search {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.product-search input {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.product-search input:focus {
+    border-color: #005f73; /* Match your theme color */
+}
+
+/* Search Container */
+.search-container {
+    position: relative;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 250px;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 1000;
+    display: none; /* Initially hidden */
+}
+
+.search-results.show {
+    display: block; /* Display when there are search results */
+}
+
+.search-results li {
+    padding: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.search-results li:hover {
+    background-color: #f0f0f0;
+}
+
+.search-results li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+.search-results li a:hover {
+    color: #005f73;
+}
+
+/* Slideshow Section Styling */
+.slideshow-section {
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.slideshow-section h2 {
+    font-size: 2rem;
+    color: #005f73;
+    margin-bottom: 20px;
+}
+
+/* Slideshow Container */
+.slideshow {
+    position: relative;
+    max-width: 1200px;         /* Maximum width of the slideshow */
+    margin: 0 auto;           /* Centers the slideshow */
+    overflow: hidden;
+    border-radius: 10px;      /* Matches the image's rounded corners */
+}
+
+.slide.active {
+    display: block; /* Show the active slide */
+}
+
+.slide {
+    display: flex;
+    flex-direction: column; /* Arrange items vertically */
+    justify-content: center;
+    align-items: center;
+    height: 600px; /* Fixed height for all slides */
+    overflow: hidden; /* Prevents overflow of images or text */
+    text-align: center; /* Ensures text is centered */
+}
+
+.slide img {
+    margin: 10px 0;
+    max-width: 100%;    /* Scale the image proportionally */
+    max-height: 80%;    /* Prevents the image from taking up too much space */
+    object-fit: contain; /* Maintain aspect ratio and ensure full visibility */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+    margin-bottom: 10px; /* Adds space between the image and text */
+    background-color: #ffffff; /* Button background color */
+}
+
+.slide p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #333; /* Neutral text color */
+}
+
+.slide a {
+    display: inline-block;
+    margin-top: 10px; /* Adds space above the link */
+    padding: 8px 15px;
+    font-size: 1rem;
+    color: #ffffff; /* Link text color */
+    background-color: #005f73; /* Button background color */
+    border-radius: 5px; /* Rounded button corners */
+    text-decoration: none; /* Remove underline */
     transition: background-color 0.3s ease;
 }
 
-.back-btn:hover {
+.slide a:hover {
+    background-color: #ffcb47; /* Hover effect for the button */
+    color: #ffffff; /* Optional: Change text color on hover */
+}
+
+/* Controls (Next/Prev Buttons) */
+.slideshow-controls {
+    position: relative;
+}
+
+.slideshow-controls button {
+    background-color: #005f73;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    margin: 5px;
+    transition: background-color 0.3s;
+}
+
+.slideshow-controls button:hover {
     background-color: #ffcb47;
 }
 
-/* General Link Styles */
-a {
-    text-decoration: none; /* Removes the underline */
-    color: #005f73; /* Default link color */
-    font-weight: bold; /* Makes the text bold */
-    transition: color 0.3s ease; /* Smooth color change on hover */
-}
-
-a:hover {
-    color: #ffcb47; /* Changes color when hovered */
-}
-
-a.back-btn:hover {
-    color: white; /* Keeps the original color on hover */
-    text-decoration: none; /* Prevents underline or other styles on hover */
-}
-
-a:active {
-    color: #ff5733; /* Changes color when clicked */
-}
+/*Products HTML Start*/
 
 footer {
     background-color: #222;
@@ -581,3 +684,91 @@ footer .social-links li a:hover {
     display: inline-block;
     text-align: center;
 }
+
+/*End of Main Page*/
+
+/*Services HTML Start*/
+
+.services-grid {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  /* Mobile: 1 column */
+  @media (max-width: 599px) {
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Tablet: 2–3 columns */
+  @media (min-width: 600px) and (max-width: 1023px) {
+    .services-grid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+  }
+  
+  /* Desktop: 3 or 6 columns */
+  @media (min-width: 1024px) {
+    .services-grid {
+      grid-template-columns: repeat(3, 1fr); /* exactly 3 per row */
+    }
+  }
+
+  
+#services .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.service-box {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+  
+  .service-box:hover {
+    transform: translateY(-5px);
+  }
+  
+  .service-img img {
+    max-width: 180px;
+    border-radius: 10px;
+  }
+  
+  .service-info h3 {
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    color: #005f73;
+    text-align: justify;
+  }
+  
+  .service-info p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+    text-align: justify;
+  }
+  
+  /* Responsive for mobile */
+  @media (max-width: 768px) {
+    .service-box {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .service-img img {
+      max-width: 100%;
+    }
+  }  
+
+/*Services HTML End*/
