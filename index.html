@@ -4,15 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Welcome to Marktel Copyline LTD - Your trusted partner for professional printing services and equipment. Explore our range of products and services.">
-    <meta name="author" content="Marktel Copyline LTD">
-    <meta name="keywords" content="Marktel Copyline LTD, printing services, printer rentals, ink supplies, professional printing, Limassol, Pafos">
-    <meta name="google-site-verification" content="b31FOxSOqk9Ig9tuvvR3rIZ0LgyAqkyYjG-GcrKp610" />
-
-    <title>Marktel Copyline - Printing Services and Rentals</title>
+    <meta name="description" content="Marktel Information">
+    <meta name="author" content="Marktel">
+    <title>Marktel Copyline</title>
 
     <!-- Link to external CSS -->
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="../css/style.css">
 
     <!-- Security Headers -->
     <meta http-equiv="Content-Security-Policy" 
@@ -25,32 +22,39 @@
     <meta name="referrer" content="no-referrer">
 
     <!-- Favicon -->
-    <link rel="icon" href="css/logo.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="css/logo.ico" type="image/x-icon">
+    <link rel="icon" href="../css/logo.ico" type="image/x-icon">
     
 </head>
 <body>
     <header>
         <div class="container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="css/logoWhite.jpg" alt="Marktel Logo">
-                </a>
-            </div>
-            <div class="header-content">
-                <nav>
-                    <ul class="nav-links">
-                        <li><a href="#products">Products</a></li>
-                        <li><a href="#about-us">About us</a></li>
-                        <li><a href="#services">Our Services</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
-                <!-- Search Field -->
-                
-            </div>
+          <div class="logo">
+            <a href="index.html">
+              <img src="../css/logoWhite.jpg" alt="Marktel Logo" />
+            </a>
+          </div>
+          <button class="hamburger" aria-label="Toggle menu">&#9776;</button>
+          <div class="header-content">
+            <nav>
+              <ul class="nav-links desktop-nav">
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about-us">About us</a></li>
+                <li><a href="#services">Our Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </nav>
+          </div>                    
         </div>
-    </header>
+      
+        <nav class="nav-overlay" hidden>
+            <ul class="nav-links drawer-nav"> <!-- ← add class here -->
+              <li><a href="#products">Products</a></li>
+              <li><a href="#about-us">About us</a></li>
+              <li><a href="#services">Our Services</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>          
+      </header>        
 
     <main>
         <!-- Product Slideshow Section -->
@@ -85,35 +89,40 @@
                 <div class="services-grid">
                     <!-- Book Printing -->
                     <div class="service-item">
-                        <img src="css/books.jpg" alt="Book Printing">
+                        <img src="../css/books.jpg" alt="Book Printing">
                         <h3>Book Printing</h3>
                         <p>Custom and high-quality book printing for all your needs.</p>
                     </div>
                     <!-- Poster Creation -->
                     <div class="service-item">
-                        <img src="css/posters1.jpg" alt="Poster Creation">
+                        <img src="../css/posters1.jpg" alt="Poster Creation">
                         <h3>Poster Creation</h3>
                         <p>Vivid and eye-catching posters to bring your ideas to life.</p>
                     </div>
                     <!-- Manual Production -->
                     <div class="service-item">
-                        <img src="css/manual.jpg" alt="Manual Production">
+                        <img src="../css/manual.jpg" alt="Manual Production">
                         <h3>Manual Production</h3>
                         <p>Detailed and professional manuals for your business.</p>
                     </div>
                     <!-- Technical Support -->
                     <div class="service-item">
-                        <img src="css/technical.jpg" alt="Technical Support">
+                        <img src="../css/technical.jpg" alt="Technical Support">
                         <h3>Technical Support</h3>
                         <p>Expert maintenance and repair services for your equipment.</p>
                     </div>
                     <!-- Printing Rentals -->
                     <div class="service-item">
-                        <img src="css/printers.webp" alt="Printing Rentals">
+                        <img src="../css/printers.webp" alt="Printing Rentals">
                         <h3>Printing Rentals</h3>
                         <p>Flexible rental options for high-quality printing equipment.</p>
                     </div>
-                    
+                    <!-- Technical Support -->
+                    <div class="service-item">
+                        <img src="../css/customer.jpg" alt="Customer Support">
+                        <h3>Customer Support</h3>
+                        <p>Expert maintenance and repair services for your equipment.</p>
+                    </div>
                 </div>
             </div>
         </section>                   
@@ -154,30 +163,17 @@
                     <p>Phone: +357 99366317</p>
                 </div>
             </div>
+            <p>
+                Images used from <a href="https://www.pexels.com/license/" target="_blank" rel="noopener noreferrer">Pexels</a> under their free license.
+            </p>
         </div>
     
         <!-- Footer Bottom -->
         <div class="footer-bottom">
-            <p>&copy; 2025 Marktel Copyline LTD. All rights reserved.</p>
+            <p>&copy; 2025 Marktel. All rights reserved.</p>
         </div>
     </footer>
-    
-
-    <script src="src/controller/slideshow.js" defer></script>
-    <script nonce="abc123">
-        console.log('This script is allowed by CSP');
-    </script>    
-    <script>
-        document.addEventListener("contextmenu", function(event) {
-            event.preventDefault();
-        });
-    </script>
-    <script>
-        document.addEventListener("keydown", function(event) {
-            if (event.ctrlKey && (event.key === "u" || event.key === "s" || event.key === "i")) {
-                event.preventDefault();
-            }
-        });
-    </script>
+    <script src="../src/controller/header.js" defer></script>
+    <script src="../src/controller/slideshow.js" defer></script>
 </body>
 </html>
