@@ -1,21 +1,41 @@
-# Marktel Copyline Website
+# Marktel Copyline Official Website
 
-Welcome to the Marktel Copyline official website repository! This website showcases Marktel Copyline Ltd, a company specializing in printing services, printer rentals, ink and paper supplies, and technical support.
+Welcome to the official website repository for Marktel Copyline Ltd — a Cyprus-based printing and office support company offering professional printing services, printer rentals, technical support, office supplies, and custom 3D printing through QuackPrint3D.
 
-🌐 Live Website
+## 🌐 Live Website
 
-You can visit the live website here:
+Visit the live website here:  
 www.marktelcopyline.com
 
-🚀 Features
+## 🚀 Services
 
-✅ Professional Printing Services - High-quality printing for books, posters, manuals, and more.✅ Printer Equipment Sales & Rentals - Rent or buy professional printing equipment.✅ Ink & Paper Supplies - Essential supplies for seamless printing.✅ Technical Support - Maintenance and repair for printing devices.
+✅ Professional Printing Services  
+High-quality printing for books, posters, manuals, flyers, business materials, and more.
 
-🌍 Domain & Hosting
+✅ Printer Equipment Sales & Rentals  
+Rent or purchase professional printing equipment for personal or business use.
 
-Domain: www.marktelcopyline.com
-Hosting: GitHub Pages
+✅ Ink & Paper Supplies  
+Reliable office and printing supplies for everyday operations.
 
-📧 Contact
+✅ Technical Support & Maintenance  
+Repair, maintenance, and technical assistance for printers and office equipment.
 
-For inquiries or support, contact Marktel Copyline Ltd:📧 Email: marktel.copyline@outlook.com📍 Location: Limassol & Pafos, Cyprus📞 Phone: +357 99366317
+✅ QuackPrint3D – Custom 3D Printing  
+Personalised 3D printed gifts, home decor, prototypes, business branding items, and creative custom designs.
+
+## 🌍 Domain & Hosting
+
+**Domain:** www.marktelcopyline.com  
+**Hosting:** GitHub Pages
+
+## 📧 Contact
+
+**Marktel Copyline Ltd**  
+📧 Email: marktel.copyline@outlook.com  
+📍 Locations: Limassol & Pafos, Cyprus  
+📞 Phone: +357 99366317
+
+---
+
+From idea → design → print → delivered.
