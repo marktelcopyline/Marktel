@@ -233,6 +233,37 @@ header
 --------------------------------------------- 
 */
 
+/*
+---------------------------------------------
+New added
+---------------------------------------------
+*/
+
+.header-area .main-nav .brand-logos {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 100px;
+  line-height: normal;
+  float: left;
+}
+
+.header-area .main-nav .brand-logos img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  display: block;
+}
+
+.background-header .main-nav .brand-logos {
+  height: 80px;
+}
+
+.background-header .main-nav .brand-logos img {
+  width: 80px;
+  height: 80px;
+}
+
 .pre-header {
   background-color: #efefef;
   height: 60px;
@@ -360,6 +391,10 @@ header
     -moz-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
+}
+
+.header-area .main-nav .logo.brand-logos {
+  line-height: normal !important;
 }
 
 .background-header .main-nav .logo {
@@ -630,6 +665,19 @@ header
 
 .header-area.header-sticky .nav li a.active {
   color: #FA2329;
+}
+
+@media (max-width: 767px) {
+  .header-area .main-nav .brand-logos img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .header-area .main-nav .brand-logos {
+    height: 100px;
+    gap: 8px;
+    margin-left: 15px;
+  }
 }
 
 @media (max-width: 1200px) {
