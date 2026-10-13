@@ -706,7 +706,7 @@ New added
 
 @media (max-width: 767px) {
   .pre-header ul.info li:last-child {
-    display: none;
+  display: inline-block;
   }
   .background-header .main-nav .nav {
     margin-top: 80px !important;
@@ -2148,3 +2148,131 @@ responsive
     padding: 30px;
   }
 }
+
+@media (max-width: 767px) {
+
+  /* Keep header above page content */
+  .header-area {
+    z-index: 9999 !important;
+  }
+
+  /* Allow dropdown to appear */
+  .header-area .main-nav {
+    position: relative;
+    overflow: visible !important;
+  }
+
+  /* Mobile dropdown */
+  .header-area .main-nav .nav {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    margin: 0 !important;
+    background-color: #ffffff !important;
+    z-index: 10000 !important;
+  }
+
+  /* Prevent transparent menu items */
+  .header-area .main-nav .nav li,
+  .header-area .main-nav .nav li a {
+    background-color: #ffffff !important;
+    opacity: 1 !important;
+  }
+
+  /* Keep hamburger aligned */
+  .header-area .main-nav .menu-trigger,
+  .background-header .main-nav .menu-trigger {
+    top: 30px !important;
+    right: 25px;
+  }
+
+  /* Keep both logos aligned */
+  .header-area .main-nav .brand-logos,
+  .background-header .main-nav .brand-logos {
+    display: flex;
+    align-items: center;
+    height: 100px;
+  }
+
+  /* Logo sizes */
+  .header-area .main-nav .brand-logos img,
+  .background-header .main-nav .brand-logos img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+  }
+
+}
+
+/* FIX PRE-HEADER ON MOBILE */
+@media (max-width: 575px) {
+
+  .pre-header {
+    height: auto;
+    padding: 12px 0;
+  }
+
+  .pre-header .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pre-header .row > div {
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
+    text-align: center;
+  }
+
+  .pre-header ul.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+
+  .pre-header ul.info li {
+    margin: 0;
+  }
+
+  .pre-header ul.info li a {
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  .pre-header ul.social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+  }
+
+  .pre-header ul.social-media li {
+    margin: 0;
+  }
+
+  .pre-header ul.social-media li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    line-height: normal;
+  }
+
+  .pre-header ul.social-media li a svg {
+    width: 14px;
+    height: 14px;
+    fill: currentColor;
+  }
+
+  /* Override the template's contact-info spacing */
+  .pre-header .contact-info {
+    margin-top: 0;
+  }
+}
+
